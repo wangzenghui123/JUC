@@ -1,7 +1,7 @@
 package com.mashibing.juc.c_000;
 
 import java.util.Arrays;
-////
+////1
 public class tt {
 
     public static void main(String[] args){
