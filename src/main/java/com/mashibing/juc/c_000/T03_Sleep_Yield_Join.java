@@ -14,14 +14,12 @@ public class T03_Sleep_Yield_Join {
 //            test.odd();
 //        }).start();
     }
-}
-
-class Test{
-    public  int num = 100;
-    Object object = new Object();
-    public Test(){}
-    public void odd(){
-        synchronized (object){
+    public static class Test{
+        public  int num = 100;
+        Object object = new Object();
+        public Test(){}
+        public void odd(){
+            synchronized (object){
                 while(true){
                     if(num > 0 && num % 2 == 1){
                         System.out.println(Thread.currentThread().getName()+"\t"+num--);
@@ -50,11 +48,11 @@ class Test{
 
                 }
 
-            object.notify();
+                object.notify();
+            }
         }
-    }
-    public void even(){
-        synchronized (object){
+        public void even(){
+            synchronized (object){
                 while(true){
                     if(num > 0 && num % 2 == 0){
                         System.out.println(Thread.currentThread().getName()+"\t"+num--);
@@ -76,7 +74,8 @@ class Test{
                 }
 
 
-            object.notify();
+                object.notify();
+            }
         }
     }
 }
