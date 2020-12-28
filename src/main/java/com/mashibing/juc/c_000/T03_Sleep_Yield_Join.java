@@ -12,7 +12,7 @@ public class T03_Sleep_Yield_Join {
 //        }).start();
 //        new Thread(()->{
 //            test.odd();
-//        }).start();
+//        }).start();fenzhi
     }
     public static class Test{
         public  int num = 100;
